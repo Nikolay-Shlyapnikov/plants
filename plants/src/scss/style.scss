@@ -1,0 +1,522 @@
+/*Начало общих стилей*/
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+
+/*Конец общих стилей*/
+
+
+/*Начало стилей слайдера*/
+
+.slider {
+    display: flex;
+    >* {
+        flex: 0 0 50%;
+    }
+    &__photo {
+        position: relative;
+        &-gecsagon {
+            position: absolute;
+            left: 56px;
+            top: 40px;
+        }
+    }
+    &__title {
+        font-family: Montserrat;
+        font-size: 68px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 83px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+    &__main-text {
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+    &__buttons-wrapper {
+        display: flex;
+    }
+    &__button {
+        flex: 0 0 50%;
+        padding: 38px 45px;
+        &.next {
+            background: #156963;
+        }
+    }
+    &__text-wrapper {
+        margin: 110px 0;
+    }
+}
+
+.button {
+    >* {
+        flex: 0 0 50%;
+    }
+    &__title {
+        font-family: Montserrat;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 39px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #156963;
+    }
+    &__title.next {
+        color: #FFFFFF;
+    }
+    &__arrow {
+        cursor: pointer;
+        font-family: Montserrat;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 29px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #f2f2f2;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.form {
+    &__button {
+        cursor: pointer;
+        background: #156963;
+        font-family: Nunito;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: center;
+        padding: 8px 32px;
+        color: #FFFFFF;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: end;
+        padding: 40px 56px 0 0;
+    }
+}
+
+
+/*Конец стилей слайдера*/
+
+
+/*Начало стилей 4-х карточек*/
+
+.four-cards {
+    display: flex;
+    padding: 140px 56px 80px;
+    justify-content: space-between;
+}
+
+.card {
+    border: 1px solid #E0E0E0;
+    padding: 21px 16px;
+    max-width: 268px;
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        span {
+            font-family: Montserrat;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+            margin: 0 0 0 16px;
+            color: #156963;
+        }
+    }
+    &__text {
+        margin: 16px 0 0 0;
+        font-family: Montserrat;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+}
+
+
+/*Конец стилей 4-х карточек*/
+
+
+/*Начало стилей растений*/
+
+.featured-plants {
+    min-width: 217px;
+    &__photo {
+        width: 217px;
+        height: 217px;
+        background: #F3F4F6;
+    }
+    &__name {
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: center;
+        margin: 16px 0 8px 0;
+    }
+    &__price {
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 0 16px 0;
+        margin: 0 0 24px 0;
+        border-bottom: 1px solid #E0E0E0;
+    }
+    &__title-text {
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+    &__select {
+        cursor: pointer;
+        border: 1px solid #E0E0E0;
+        padding: 8px 12px;
+        display: flex;
+        align-items: center;
+        span {
+            margin: 0 15px 0 0;
+            font-family: Montserrat;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 15px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+    }
+    &__container {
+        padding: 0 56px;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+/*Конец стилей растений*/
+
+
+/*Начало стилей модального окна*/
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($color: #000000, $alpha: .4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.window {
+    background: #FFFFFF;
+    border-radius: 8.37862px;
+    width: 470px;
+    padding: 40px;
+    position: relative;
+    &__cross {
+        cursor: pointer;
+        position: absolute;
+        right: 22px;
+        top: 22px;
+    }
+    &__circle-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    &__cirle {
+        height: 90px;
+        width: 90px;
+        border-radius: 50%;
+        background: #001E35;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__title {
+        font-family: PT Sans;
+        font-size: 21px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 26px;
+        letter-spacing: 0em;
+        text-align: center;
+        margin: 18px 0 9px 0;
+    }
+    &__text {
+        font-family: PT Sans;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: -0.025em;
+        text-align: center;
+        margin: 0 0 40px 0;
+    }
+    &__form {
+        input {
+            width: 100%;
+            border: 0.63px solid #DBDEDF;
+            border-radius: 15.7586px;
+            height: 40px;
+            font-family: PT Sans;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 23px;
+            letter-spacing: 0em;
+            text-align: left;
+            padding: 8px 16px;
+            margin: 0 0 14px 0;
+        }
+        button {
+            width: 185px;
+            box-shadow: 0px 1.48681px 2.97363px rgba(0, 0, 0, 0.15);
+            border-radius: 15.7586px;
+            padding: 8px 56px;
+            font-family: PT Sans;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: 0em;
+            text-align: center;
+        }
+        button.back {
+            margin: 0 9px 0 0;
+        }
+        button.send {
+            margin: 0 0 0 9px;
+            background: #CCE1FE;
+        }
+    }
+}
+
+.spinner {
+    width: 100px;
+    height: 100px;
+    margin: 30px auto;
+    position: relative;
+    animation: rotateit 1.3s linear infinite;
+    &__wrapper {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #FFFFFF;
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+    &__wrapper.d-flex {
+        display: flex;
+    }
+    @keyframes rotateit {
+        from {
+            transform: rotate(360deg);
+        }
+        to {
+            transform: rotate(0deg);
+        }
+    }
+    &.bar div {
+        width: 10px;
+        height: 30px;
+        background: black;
+        position: absolute;
+        top: 35px;
+        left: 45px;
+    }
+    &.bar div:nth-child(1) {
+        transform: rotate(0deg) translate(0, -30px);
+    }
+    &.bar div:nth-child(2) {
+        transform: rotate(45deg) translate(0, -30px);
+        opacity: 0.7;
+    }
+    &.bar div:nth-child(3) {
+        transform: rotate(90deg) translate(0, -30px);
+        opacity: 0.6;
+    }
+    &.bar div:nth-child(4) {
+        transform: rotate(135deg) translate(0, -30px);
+        opacity: 0.5;
+    }
+    &.bar div:nth-child(5) {
+        transform: rotate(180deg) translate(0, -30px);
+        opacity: 0.4;
+    }
+    &.bar div:nth-child(6) {
+        transform: rotate(225deg) translate(0, -30px);
+        opacity: 0.3;
+    }
+    &.bar div:nth-child(7) {
+        transform: rotate(270deg) translate(0, -30px);
+        opacity: 0.2;
+    }
+    &.bar div:nth-child(8) {
+        transform: rotate(315deg) translate(0, -30px);
+        opacity: 0.1;
+    }
+}
+
+.table {
+    &__row {
+        margin: 20px 0 0 0;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #f2f2f2;
+    }
+    &__row>* {
+        font-family: PT Sans;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #156963;
+    }
+    &__completed {
+        flex: 0 0 15%
+    }
+    &__id {
+        flex: 0 0 10%
+    }
+    &__user-id {
+        flex: 0 0 10%
+    }
+    &__title {
+        flex: 0 0 40%;
+    }
+    &__num {
+        flex: 0 0 10%
+    }
+}
+
+
+/*Конец стилей модального окна*/

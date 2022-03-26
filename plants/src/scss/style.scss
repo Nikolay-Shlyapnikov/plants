@@ -101,13 +101,21 @@ h6 {
     >* {
         flex: 0 0 50%;
     }
-    &__photo {
+    &__photo-container {
+        margin: 0 60px 0 0;
+        overflow-x: hidden;
+        max-width: 608px;
         position: relative;
         &-gecsagon {
             position: absolute;
             left: 56px;
             top: 40px;
         }
+    }
+    &__photo-track {
+        position: relative;
+        transition: all ease 0.4s;
+        display: flex;
     }
     &__title {
         font-family: Montserrat;
@@ -131,6 +139,8 @@ h6 {
         display: flex;
     }
     &__button {
+        transition: all ease 0.6s;
+        cursor: pointer;
         flex: 0 0 50%;
         padding: 38px 45px;
         &.next {
@@ -160,7 +170,6 @@ h6 {
         color: #FFFFFF;
     }
     &__arrow {
-        cursor: pointer;
         font-family: Montserrat;
         font-size: 24px;
         font-style: normal;
@@ -287,7 +296,17 @@ h6 {
         letter-spacing: 0em;
         text-align: left;
     }
-    &__select {
+    &__select-wrapper {
+        position: relative;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 15px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+    &__select-title {
         cursor: pointer;
         border: 1px solid #E0E0E0;
         padding: 8px 12px;
@@ -295,14 +314,34 @@ h6 {
         align-items: center;
         span {
             margin: 0 15px 0 0;
-            font-family: Montserrat;
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 15px;
-            letter-spacing: 0em;
-            text-align: left;
         }
+    }
+    &__select-title-text {
+        min-width: 81.73px;
+    }
+    &__selectable-options {
+        text-align: center;
+        transition: all ease 0.4s;
+        transform-origin: 0 0;
+        transform: scaleY(0);
+        position: absolute;
+        width: 100%;
+        cursor: pointer;
+        background-color: #FFF;
+        border: 1px solid #f2f2f2;
+        box-shadow: 0px 1.4868133068084717px 2.9736266136169434px 0px #00000026;
+    }
+    &__select-wrapper:hover &__selectable-options {
+        transform: scaleY(1);
+    }
+    &__select-wrapper:hover .select__arrow {
+        transform: rotate(180deg);
+    }
+    &__option {
+        padding: 8px 10px;
+    }
+    &__option:hover {
+        background-color: #F2F2F2;
     }
     &__container {
         padding: 0 56px;
@@ -311,6 +350,10 @@ h6 {
         display: flex;
         justify-content: space-between;
     }
+}
+
+.select__arrow {
+    transition: ease all 0.4s;
 }
 
 
@@ -332,6 +375,7 @@ h6 {
 }
 
 .window {
+    max-height: 500px;
     background: #FFFFFF;
     border-radius: 8.37862px;
     width: 470px;
@@ -391,6 +435,19 @@ h6 {
             text-align: left;
             padding: 8px 16px;
             margin: 0 0 14px 0;
+        }
+        input.invalid {
+            border-color: red;
+        }
+        span.error {
+            color: red;
+            font-family: PT Sans;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: 0em;
+            text-align: center;
         }
         button {
             width: 185px;

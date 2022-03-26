@@ -112,14 +112,27 @@ h6 {
           flex: 0 0 50%;
 }
 
-.slider__photo {
+.slider__photo-container {
+  margin: 0 60px 0 0;
+  overflow-x: hidden;
+  max-width: 608px;
   position: relative;
 }
 
-.slider__photo-gecsagon {
+.slider__photo-container-gecsagon {
   position: absolute;
   left: 56px;
   top: 40px;
+}
+
+.slider__photo-track {
+  position: relative;
+  -webkit-transition: all ease 0.4s;
+  -o-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .slider__title {
@@ -149,6 +162,10 @@ h6 {
 }
 
 .slider__button {
+  -webkit-transition: all ease 0.6s;
+  -o-transition: all ease 0.6s;
+  transition: all ease 0.6s;
+  cursor: pointer;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
@@ -185,7 +202,6 @@ h6 {
 }
 
 .button__arrow {
-  cursor: pointer;
   font-family: Montserrat;
   font-size: 24px;
   font-style: normal;
@@ -338,7 +354,18 @@ h6 {
   text-align: left;
 }
 
-.featured-plants__select {
+.featured-plants__select-wrapper {
+  position: relative;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.featured-plants__select-title {
   cursor: pointer;
   border: 1px solid #E0E0E0;
   padding: 8px 12px;
@@ -350,15 +377,52 @@ h6 {
           align-items: center;
 }
 
-.featured-plants__select span {
+.featured-plants__select-title span {
   margin: 0 15px 0 0;
-  font-family: Montserrat;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 15px;
-  letter-spacing: 0em;
-  text-align: left;
+}
+
+.featured-plants__select-title-text {
+  min-width: 81.73px;
+}
+
+.featured-plants__selectable-options {
+  text-align: center;
+  -webkit-transition: all ease 0.4s;
+  -o-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+  -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: scaleY(0);
+      -ms-transform: scaleY(0);
+          transform: scaleY(0);
+  position: absolute;
+  width: 100%;
+  cursor: pointer;
+  background-color: #FFF;
+  border: 1px solid #f2f2f2;
+  -webkit-box-shadow: 0px 1.4868133068px 2.9736266136px 0px #00000026;
+          box-shadow: 0px 1.4868133068px 2.9736266136px 0px #00000026;
+}
+
+.featured-plants__select-wrapper:hover .featured-plants__selectable-options {
+  -webkit-transform: scaleY(1);
+      -ms-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+.featured-plants__select-wrapper:hover .select__arrow {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.featured-plants__option {
+  padding: 8px 10px;
+}
+
+.featured-plants__option:hover {
+  background-color: #F2F2F2;
 }
 
 .featured-plants__container {
@@ -372,6 +436,12 @@ h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.select__arrow {
+  -webkit-transition: ease all 0.4s;
+  -o-transition: ease all 0.4s;
+  transition: ease all 0.4s;
 }
 
 /*Конец стилей растений*/
@@ -395,6 +465,7 @@ h6 {
 }
 
 .window {
+  max-height: 500px;
   background: #FFFFFF;
   border-radius: 8.37862px;
   width: 470px;
@@ -470,6 +541,21 @@ h6 {
   text-align: left;
   padding: 8px 16px;
   margin: 0 0 14px 0;
+}
+
+.window__form input.invalid {
+  border-color: red;
+}
+
+.window__form span.error {
+  color: red;
+  font-family: PT Sans;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: center;
 }
 
 .window__form button {
